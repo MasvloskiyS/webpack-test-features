@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "sideEffects": false,
   "scripts": {
     "start": "webpack serve --env mode=development --no-cache",
     "build:dev": "webpack --env mode=development",
