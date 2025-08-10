@@ -34,15 +34,6 @@ export const buildWebpack = (options: IBuildOptions): webpack.Configuration => {
         devServer: isDev
             ? buildDevServer(options)
             : undefined,
-        optimization: {
-            usedExports: true, // позначає невикористані експорти
-            innerGraph: true,  // аналізує використання змінних/функцій всередині модуля
-            minimize: true,    // вмикає TerserPlugin
-            // додаткові налаштування для агресивного видалення
-            minimizer: [
-              '...', // залишає стандартний TerserPlugin
-            ]
-        }
     };
 
     return config;
